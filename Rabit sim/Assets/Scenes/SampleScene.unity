@@ -3145,7 +3145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1687892611994400, guid: d4cec3251fbdc0146abcf1f71f98038f, type: 2}
-  frequency: 0.5
+  frequency: 1
 --- !u!4 &1433132608
 Transform:
   m_ObjectHideFlags: 0

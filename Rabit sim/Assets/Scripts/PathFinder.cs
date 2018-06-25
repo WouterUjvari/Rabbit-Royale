@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PathFinder : MonoBehaviour {
+
+    /*
+    Dit script gaat over pathfinding.
+    Het verandert de destination in navmeshagent 
+    en kan tags vinden die dichtbij zijn.
+    */
     
 
     [Header("Pathfinding")]
@@ -31,6 +37,7 @@ public class PathFinder : MonoBehaviour {
         }
     }
 
+    //functie die de tag vindt.
     public GameObject FindClosest(string taggetWith)
     {
         

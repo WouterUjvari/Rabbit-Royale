@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rabbit : Brain {
 
-
+    //Dit script kijkt naar zijn parent Brain en voert de functies uit die bij de task horen.
 
     public override void Update()
     {
@@ -23,6 +23,7 @@ public class Rabbit : Brain {
             GotoBase();
         }
 
+        //Als het konijn teveel hunger of thirst heeft, gaat health omlaag.
         if (hunger >= 100 || thirst >= 100)
         {
             health -= Time.deltaTime * 5;   
@@ -48,6 +49,7 @@ public class Rabbit : Brain {
         */
     }
 
+    //Gebruikt de functie in Pathfinding en overload die met de tag "Carrot"
     public void FindCarrot()
     {
         if(myTarget == null)
@@ -60,6 +62,7 @@ public class Rabbit : Brain {
         }       
     }
 
+    //Zelfde maar dan met water.
     public void FindWater()
     {
         if (myTarget == null)
@@ -72,6 +75,7 @@ public class Rabbit : Brain {
         }
     }
 
+    //Base is static.
     public void GotoBase()
     {
         myTarget = bunnyBase;
@@ -79,7 +83,8 @@ public class Rabbit : Brain {
 
     public void Patrol()
     {
-
+        //Zou hier linecasts kunnen maken om het konijn te laten roamen.
+        //Niet belangrijk voor de opdracht.
     }
 
     public void Die()
@@ -87,9 +92,9 @@ public class Rabbit : Brain {
         Destroy(this.gameObject);
     }
 
+    //Cut
     public void FindToCanibalize()
-    {
-        
+    {      
         if (myTarget == null)
         {         
             if (FindClosest("Rabbit") != null)

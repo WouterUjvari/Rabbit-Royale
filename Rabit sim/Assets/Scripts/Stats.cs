@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Stats : PathFinder {
 
+    //Houd verschillende stats bij.
+
     [Header("Character stats")]
     public float hunger;
     public float thirst;
@@ -12,16 +14,11 @@ public class Stats : PathFinder {
     
     public float health = 100;
 
-
-
     public override void Update()
     {
         base.Update();
         hunger += Time.deltaTime;
         thirst += Time.deltaTime;
         sleepyness += Time.deltaTime;
-
-       
-
     }
 }

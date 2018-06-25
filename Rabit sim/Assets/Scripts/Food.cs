@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Food : MonoBehaviour {
 
+    //Spreekt voorzich.
+
     public string objName;
     public float nutritionValue;
 
